@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* CSS Document */
+
+*,*::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: #000000;
+}
+
+body {
+	color: #333333;
+	font-family: 'Ghoust Solid';
+}
+
+a {
+	color: #333333;
+	text-decoration: none;
+}
+
+/*FV_text*/
+.slider-wrapper {
+	position: relative;
+}
+
+.swiper-slider {
+	color: #000000;
+}
+
+.FV {
+	position: absolute;
+	z-index: 10;
+	width: 565px;
+	height: 438px;
+    margin-top: 240px;
+	margin-left: 191px;
+/*消す*/
+}
+
+/* p site-tile-sub */
+.FV p{
+font-family: 'Arial Black';
+}
+
+.site-title {
+	font-size: clamp(100px, 12vw, 220px);
+	padding-top: 32px;
+}
+
+
+
+.site-tile-sub {
+	font-size: clamp(25px, 2.5vw, 45px);
+	width: 554px;
+	width: 30vw;
+	border-bottom: 3px solid white;
+	padding-bottom: 0.3em;
+}
+
+.FV p.site-tile-sub2{
+	font-size: clamp(15px, 2vw, 30px);
+	letter-spacing: 0.01em;
+	padding-top: 30px;
+}
+
+/*FVスライドショー*/
+.swiper-slide {
+	min-height: 100%;
+	height: 1000px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
+
+.swiper-slide.Slide1 {
+	background-image: url("../img/FV.jpg");
+}
+.swiper-slide.Slide2 {
+	background-image: url("../img/Chloe Grace Moretz photo-043.jpg");
+}
+.swiper-slide.Slide3 {
+	background-image: url("../img/Chloe Grace Moretz photo-277.jpg");
+}
+
+/*about*/
+.about {
+	display: flex;
+	background-color: #000000;
+	height: 900px;
+	width: 100%;
+	padding-left: 150px;
+	padding-top: 150px;
+}
+
+.about-image1 {
+	position: absolute;
+	height: 312px;
+	width: 517px;
+}
+
+.about-image2 {
+	position: relative;
+	height: 312px;
+	width: 517px;
+	top: 260px;
+	left: 255px;
+}
+
+.about-text {
+	padding-left: 364px;
+}
+
+.abo {
+	font-size: 130px;
+}
+
+.about-article {
+	font-size: 18px;
+	padding-top: 68px;
+}
+
+/*ギャラリー*/
+
+.gallery {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 1300px;
+	height: 1300px;
+}
+
+.gal {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	font-size: 130px;
+	padding-bottom: 230px;
+}
+
+.gallery-img {
+	display: grid;
+	grid-template-columns: 412px 412px 412px;
+	row-gap: 115px;
+    column-gap: 10px;
+	justify-content: center;
+}
+
+.gallery-img img {
+	background: #ccc;
+    border: solid 1px #000;
+    text-align: center;
+	width: 412px;
+	height: 273px;
+}
+
+.cd-fixed-bg {
+	background-image: url("../img/galleryback.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+	background-size: cover;
+	background-color: #000000;
+}
+
+/*フッター*/
+
+.footer {
+}
+
+.logo {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.fot {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.footer p {
+	font-size: 0.875rem;
+	text-align: center;
+	margin-top: 315px;
+	margin-bottom: 100px;
+}
+
+/*ナヴィゲーション*/
+/*========= ナビゲーションのためのCSS ===============*/
+
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+	top:0;
+    right: -120%;
+	width:25%;
+    height: 100vh;/*ナビの高さ*/
+	background:#000000;
+	opacity: 0.5;
+    /*動き*/
+	transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive{
+    right: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999; 
+    width: 100%;
+    height: 100vh;/*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:10%;
+    transform: translate(-50%,-50%);
+}
+
+/*リストのレイアウト設定*/
+
+#g-nav li{
+	list-style: none;
+    text-align: center;
+}
+
+#g-nav li a{
+	font-size: 30px;
+	color: #FFFFFF;
+	text-decoration: underline;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+	position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+	top:10px;
+	right: 10px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+}
+	
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	background-color: #ffffff;
+  	width: 45%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
